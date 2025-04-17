@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Página com Upload e Impressão</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <button id="printButton" onclick="window.print()">🖨️ Imprimir Página</button>
+  <h1 class="titulo-principal">AVALIAÇÃO ONDAS CEREBRAIS (NEUROFEEDBACK)</h1>
+
+  <div class="container">
+    <!-- Blocos para upload -->
+    <div class="left-panel">
+      <div class="image-slot" onclick="uploadImage(0)">
+        <input type="file" accept="image/*" onchange="previewImage(event, 0)">
+        <img id="img0" src="" alt="">
+      </div>
+      <div class="image-slot" onclick="uploadImage(1)">
+        <input type="file" accept="image/*" onchange="previewImage(event, 1)">
+        <img id="img1" src="" alt="">
+      </div>
+      <div class="image-slot" onclick="uploadImage(2)">
+        <input type="file" accept="image/*" onchange="previewImage(event, 2)">
+        <img id="img2" src="" alt="">
+      </div>
+    </div>
+
+    <!-- Blocos para logos -->
+    <div class="right-panel">
+
+      <!-- Campos acima da logo 1 -->
+      <div class="dados-paciente">
+        <label>Data:
+          <input type="text" placeholder="__/__/____">
+        </label>
+        <label>Nome:
+          <input type="text" placeholder="Nome completo">
+        </label>
+        <label>Data de Nascimento:
+          <input type="text" placeholder="__/__/____">
+        </label>
+      </div>
+
+      <!-- Logo 1 -->
+      <div class="logo-slot">
+        <img src="logo1.png" alt="Logo 1">
+      </div>
+
+      <!-- Logo 2 -->
+      <div class="logo-slot">
+        <img src="logo2.png" alt="Logo 2">
+      </div>
+
+      <!-- Informações abaixo da logo 2 -->
+      <div style="margin-top: 10px; color: rgb(0, 0, 0); font-weight: bold;">
+        <div>Endereço: Rua Bauru N° 841 Vila São Carlos - Mogi Guaçu SP</div>
+        <div>WhatsApp: (19) 98359-4515</div>
+      </div>
+
+      <!-- CNPJ ao final -->
+      <div style="margin-top: 15px; font-size: 0.9rem; color: rgb(0, 0, 0); font-weight: bold;">
+        CNPJ: 47.927.484/0001-82
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
